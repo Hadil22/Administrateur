@@ -42,6 +42,7 @@ import { ListePermutationComponent } from './liste-permutation/liste-permutation
     ListePermissionComponent,
     AjouterPermutationComponent,
     ListePermutationComponent
+
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,14 @@ import { Admin } from '../Entity/Admin.Entity';
   styleUrls: ['./ajouter-admin.component.css']
 })
 export class AjouterAdminComponent implements OnInit {
+
+  
+  isOpen = false; // Cette variable contrôle l'ouverture/fermeture du menu
+
+  toggleMenu(): void {
+    this.isOpen = !this.isOpen;}
+    logout():void{}
+    
   messageCommande=""
 
   AdminForm:FormGroup

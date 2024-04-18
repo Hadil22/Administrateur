@@ -1677,7 +1677,7 @@
           <div class="mb-3">
             <label for="HeurDete" class="form-label">Heur D'été</label>
             <label for="heure-ete">Heure d'été:</label>
-            <input type="checkbox" id="heure-ete" name="heure-ete">
+            <input formControlName="heureete" type="checkbox" id="heure-ete" name="heure-ete">
           <div class="mb-3">
             <label for="numCIN" class="form-label">Permission Pour</label>
             <select formControlName="permissionpour" class="form-select" id="exampleFormControlSelect2" aria-label="Multiple select example">
@@ -1689,6 +1689,19 @@
           </div>
           <p>Aucun Planing ne vous a été planifié pour ce jour!</p>
           <p>Vous pouvez désormais faire une demande avec un planning fictif le temps que votre responsable vous en affectera un.</p>
+          <div class="mb-3">
+
+          <label for="raison" class="form-label">Raison</label>
+          <input formControlName="raisons" type="text" class="form-control" id="raisons" placeholder="raisons" />
+        </div>
+
+        <div class="mb-3">
+          <label for="responsabledirect" class="form-label">Responsable directe</label>
+          <select formControlName="responsabledirecte" class="form-select" id="exampleFormControlSelect2" aria-label="Multiple select example">
+            <option value="Beldi Asma">beldi Asma</option>
+            
+          </select>
+        </div>
          
           <button class="btn btn-primary" type="submit">Envoyer la demande</button>
           <span style="text-align: left;" [innerHtml]="this.messageCommande"></span>

@@ -19,7 +19,7 @@ constructor(private service :CrudService,private router:Router,private fb:FormBu
   let formControls = {
     jourpermission: new FormControl('',[ 
                       Validators.required,]), 
-                      heurete: new FormControl('',[ 
+                      heureete: new FormControl('',[ 
                           Validators.required,]), 
                           permissionpour: new FormControl('',[ 
                             Validators.required,]), 
@@ -31,7 +31,7 @@ constructor(private service :CrudService,private router:Router,private fb:FormBu
    this.PermissionForm = this.fb.group(formControls)
  }
  get jourpermission() {return this.PermissionForm.get('jourpermission');}  
- get heurete() {return this.PermissionForm.get('heurete');}  
+ get heureete() {return this.PermissionForm.get('heureete');}  
  get permissionpour() {return this.PermissionForm.get('permissionpour');}  
  get raisons() {return this.PermissionForm.get('raisons');}
  get responsabledirecte() {return this.PermissionForm.get('responsabledirecte');}
@@ -41,12 +41,12 @@ constructor(private service :CrudService,private router:Router,private fb:FormBu
   let data = this.PermissionForm.value;
   console.log(data);
   let permission = new Permission(
-   undefined, data.jourpermission,data.heurete,data.permissionpour,data.raisons,data.responsabledirecte);
+   undefined, data.jourpermission,data.heureete,data.permissionpour,data.raisons,data.responsabledirecte);
   console.log(permission);
   
   if (
     data.jourpermission == 0  ||
-    data.heurete == 0  ||
+    data.heureete == 0  ||
     data.permissionpour == 0  ||
     data.raisons == 0  ||
     data.responsabledirecte == 0
